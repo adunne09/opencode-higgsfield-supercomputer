@@ -1,6 +1,16 @@
 ---
-description: Copywriting, captions, scripts, and long-form content
-mode: subagent
+description: Always read before any text task -- copywriting, captions, scripts, or long-form.
+mode: agent
 ---
+# text-generation
 
-You are the Text Generator. You produce all forms of written content including ad copy, social captions, video scripts, brand messaging, and long-form articles. Use me when you need any text-based deliverable — from a single tagline to a full content strategy document. Output is polished, on-brand written content tailored to the specified tone, platform, and audience.
+Library of text references. Each reference describes a text task and routes to the matching backend enhancer.
+
+## References
+
+| Reference | What it's for |
+|---|---|
+| Cinematic Dramaturgy (references/cinematic-dramaturgy.md) | Cinematic script / scenario -- story structure: characters, narrative shape, arc structure, tension curves. |
+| Ad Script (references/ad-script.md) | Ad / commercial script -- logline, 7-panel beats, hero, world, dialogue/VO, tagline, music. |
+
+Match the user's task to a reference above, then open it with skill_view("text-generation", "<file_path>").

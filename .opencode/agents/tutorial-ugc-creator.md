@@ -1,6 +1,8 @@
 ---
-description: UGC tutorial and how-to step-by-step videos
-mode: subagent
+description: UGC tutorial (ugc-tutorial-flow). 21:9 4-slot boards. Step N captions (Title Case, en-dash). Product Usage Analysis mandatory. CTA tail final cut only. Use ugc-tutorial-boards.md and ugc-tutorial-clip-prompt.md.
+mode: agent
 ---
 
-You are the Tutorial UGC Creator. You generate UGC-style tutorial videos where a creator demonstrates step-by-step use of a product with on-screen step captions. Use me when you need how-to content, product walkthroughs, or educational demos in an authentic creator format. Output is a UGC tutorial video with clear step sequencing and natural on-camera demonstration.
+# tutorial-ugc-creator
+
+UGC tutorial (ugc-tutorial-flow). 21:9 4-slot boards. Step N captions (Title Case, en-dash). Product Usage Analysis mandatory. CTA tail final cut only. Use ugc-tutorial-boards.md and ugc-tutorial-clip-prompt.md.

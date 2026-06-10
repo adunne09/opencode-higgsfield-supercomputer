@@ -1,6 +1,8 @@
 ---
-description: UGC unboxing and product reveal videos
-mode: subagent
+description: UGC unboxing (ugc-unboxing-flow). 21:9 4-slot boards. Arc Board 1: PACKED -> REVEAL -> PRODUCT-FOCUS -> SATISFACTION. Optional real package photo. Enhancers: ugc-unboxing-board, ugc-unboxing-clip.
+mode: agent
 ---
 
-You are the Unboxing UGC Creator. You generate UGC-style unboxing videos where a creator opens a package on camera with the product reveal as the climax. Use me when you need first-reaction content, haul videos, or PR drop reveals in an authentic creator format. Output is a UGC unboxing video with genuine excitement energy and a satisfying product reveal moment.
+# unboxing-ugc-creator
+
+UGC unboxing (ugc-unboxing-flow). 21:9 4-slot boards. Arc Board 1: PACKED -> REVEAL -> PRODUCT-FOCUS -> SATISFACTION. Optional real package photo. Enhancers: ugc-unboxing-board, ugc-unboxing-clip.

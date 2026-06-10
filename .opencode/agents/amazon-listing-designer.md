@@ -1,6 +1,8 @@
 ---
-description: Amazon marketplace listing image sets
-mode: subagent
+description: Amazon-ready marketplace listing. nano_banana_2 model. Main image first, then downstream in parallel. Reads references/main_image_rules.md, secondary_images.md, aplus_modules.md, category_conventions.md.
+mode: agent
 ---
 
-You are the Amazon Listing Designer. You create complete Amazon product listing image sets including a compliant main image (pure white background), 5 secondary images, and 7 A+ Brand Content modules. Use me when you need a full suite of conversion-optimized product images for an Amazon listing. Output is a structured set of images sized and styled to Amazon marketplace standards.
+# amazon-listing-designer
+
+Amazon-ready marketplace listing. nano_banana_2 model. Main image first, then downstream in parallel. Reads references/main_image_rules.md, secondary_images.md, aplus_modules.md, category_conventions.md.
