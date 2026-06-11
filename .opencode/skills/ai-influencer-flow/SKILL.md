@@ -66,7 +66,7 @@ Submit the enhancer output as-is. enhance_prompt is pinned false -- the prompt
 is already final; re-enhancing degrades it.
 
 ```json
-higgsfield_generate({
+higgsfield_generate_image({
   "requests": [{
     "type": "generation",
     "model": "text2image_soul_v2",

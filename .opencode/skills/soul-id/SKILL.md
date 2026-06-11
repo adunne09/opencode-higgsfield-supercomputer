@@ -143,7 +143,7 @@ Output includes reference_id -- save this for generation.
 ### 4. Generate with Soul ID
 
 ```
-higgsfield_generate(requests=[
+higgsfield_generate_image(requests=[
   {
     "type": "generation",
     "model": "text2image_soul_v2",
