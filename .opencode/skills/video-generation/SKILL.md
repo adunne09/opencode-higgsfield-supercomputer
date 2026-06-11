@@ -43,8 +43,8 @@ Classify the request before starting:
   All shots become ONE clip -- never generate one video per shot.
 - UGC / creator review -> read the matching ugc-* reference.
 - Podcast video -> read podcast-video.md.
-- Motion design / brand reel -> use classicMD-flow / highMD-flow / typographyMD-flow /
-  infographicMD-flow / productMD-flow skills.
+- Motion design / brand reel -> use classicmd-flow / highmd-flow / typographymd-flow /
+  infographicmd-flow / productmd-flow skills.
 - Cartoon clip -> read cartoon-clip-prompt.md.
 - Simple one-shot request -> use the Pipeline below.
 

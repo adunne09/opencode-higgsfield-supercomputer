@@ -161,4 +161,4 @@ These are named pipelines inside higgsfield_enhancer:
 - Code execution: Shell via terminal; structured code via code_execution toolset (loadable)
 - Connected services: OAuth connectors (Google Drive, Gmail, Slack, Notion, etc.) via connectors toolset (loadable)
 - Social media research: Instagram, TikTok, YouTube via dedicated toolsets (loadable)
-- Audio: TTS, voice swap, dubbing via audio-generation skill plus higgsfield_audio toolset
+- Audio: TTS, voice swap, dubbing via audio-generation skill plus higgsfield_audio toolset. Tool: `higgsfield_audio_generate` (batch-shaped, always pass requests as array). Modes: voiceover, change_voice, translate.

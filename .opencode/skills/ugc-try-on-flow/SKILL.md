@@ -18,3 +18,12 @@ No mirrors or reflections anywhere. No CTA tail. No on-screen costume change.
 Default monologue frame: personal-want mini-story (not generic praise).
 All other pipeline steps identical to ugc-flow (character, product upload, boards, Seedance, stitch).
 NOT for: unboxing (ugc-unboxing-flow), talking-head review (ugc-flow), tutorial (ugc-tutorial-flow).
+## Clip prompt reference
+Clip prompt writer: skill_view("video-generation", "references/ugc-try-on-clip-prompt.md")
+
+## Shared pipeline steps (from ugc-flow)
+1. Character: skill_view("image-generation", "references/soul-v2-ugc-character.md")
+2. Product: URL -> skill_view("product-analyzer", "references/url-extract.md") | Photo -> skill_view("product-analyzer", "references/visual-analysis.md")
+3. Boards: higgsfield_enhancer(flow="ugc-try-board", inputs={...}, image_refs={product_url, character_url})
+4. Clips: higgsfield_enhancer(flow="ugc-try-clip") -> higgsfield_generate_video(model="seedance_2_0")
+5. Stitch: montage skill (concatenate boards + voiceover via ffmpeg)
