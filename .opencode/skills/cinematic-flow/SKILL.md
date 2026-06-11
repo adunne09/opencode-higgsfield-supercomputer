@@ -414,7 +414,7 @@ enhancer_call(
 - **WRONG**: Putting asset URLs or media_ids in the `medias[]` array for element injection
 - **WRONG**: Describing the character appearance in prose instead of using the element token
 
-The `medias[]` array in `higgsfield_generate` is reserved for user-provided reference images that are NOT registered elements.
+The `medias[]` array in `higgsfield_generate_image` / `higgsfield_generate_video` is reserved for user-provided reference images that are NOT registered elements.
 
 #### 7.3  Batch Generation
 
@@ -688,7 +688,7 @@ pipeline_state = {
 
 ### 11.1  Generation Failures
 
-If `higgsfield_generate` fails for a clip:
+If `higgsfield_generate_video` fails for a clip:
 1. Retry once with the same prompt
 2. If retry fails, simplify the prompt (remove complex motion directives)
 3. If simplified fails, flag for user attention with the specific error

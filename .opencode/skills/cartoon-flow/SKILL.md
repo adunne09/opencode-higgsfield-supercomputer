@@ -70,7 +70,7 @@ Every generated or uploaded asset MUST be tracked with both channels:
 
 When passing assets to any enhancer or generation call, always supply BOTH
 media_id and url. If either is missing, the pipeline breaks. After every
-higgsfield_generate call, capture both values from the response and store them
+higgsfield_generate_image / higgsfield_generate_video call, capture both values from the response and store them
 for all subsequent phases.
 
 When uploading user-provided reference images via higgsfield_upload, capture the
@@ -80,7 +80,7 @@ returned id as the media_id and the url from the response.
 
 ## PARALLEL CALL RULE
 
-Every higgsfield_enhancer and higgsfield_generate call MUST use count: 1.
+Every higgsfield_enhancer and higgsfield_generate_image / higgsfield_generate_video call MUST use count: 1.
 Never set count > 1.
 
 When you need multiple outputs (e.g., 3 characters, 2 locations), issue them as
@@ -589,7 +589,7 @@ Present the final montage (or ordered clip set) as the deliverable.
 
 - If any higgsfield_enhancer call fails, retry once. If it fails again,
   inform the user and offer to skip or retry the specific asset.
-- If higgsfield_generate fails, retry once with the same parameters. Do NOT
+- If higgsfield_generate_image / higgsfield_generate_video fails, retry once with the same parameters. Do NOT
   alter the prompt or media slots on retry.
 - If a user rejects an asset at an approval gate, re-run only the affected
   sub-phase (e.g., re-run Phase 2a + 2b for a specific character, not all

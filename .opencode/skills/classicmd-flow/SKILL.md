@@ -416,7 +416,7 @@ medias: [{
 
 ### Rules
 1. **Generated outputs are NEVER re-uploaded.** The `result.url` from
-   `higgsfield_generate` is already a CDN URL. Calling `higgsfield_upload`
+   `higgsfield_generate_image` / `higgsfield_generate_video` is already a CDN URL. Calling `higgsfield_upload`
    on it would create a redundant copy and break chain provenance.
 2. **User-supplied files ARE uploaded.** Logos, brand assets, or reference
    images from the user's local filesystem go through `higgsfield_upload`
@@ -509,7 +509,7 @@ HR-9 (palette) or the photoreal-human ban.
 
 ## 16. Checklist Before Each Generation Call
 
-Before firing any `higgsfield_generate`, verify:
+Before firing any `higgsfield_generate_image` / `higgsfield_generate_video`, verify:
 
 - [ ] Prompt is in **fixed English** (regardless of user language)
 - [ ] **HR-0:** All media references use `result.url` + `job_id` (no re-uploads)

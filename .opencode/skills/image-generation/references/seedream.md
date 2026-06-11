@@ -1,28 +1,31 @@
-# Image Generation Reference - Seedream V4.5 / V5 Lite
+# Seedream (seedream_v4_5 / seedream_v5_lite)
 
-Model ID: `seedream_v4_5`
+Excels at **face identity preservation** from reference photos, compositing from
+multiple references, product placement, and text transfer between images. Prompt
+is always required, even in edit mode with references.
 
-Best for: Face edits on real photographs (identity stays intact), strong at vector graphics. NOT for from-scratch cartoon generation.
+## Prompting
 
-Supported aspect ratios: 1:1, 4:3, 16:9, 3:2, 21:9, 3:4, 9:16, 2:3 (V4.5); 1:1, 16:9, 9:16, 4:3, 3:4 (V5 Lite)
+Reference images are addressed as **"Image0"**, **"Image1"**, … matching their
+order in the `medias` array (up to 10). Instruction-based — tell the model what
+to do with the inputs:
+1. **Action** — "Replace the product in Image1 with that from Image2", "Place the
+   person from Image1 into the scene from Image2".
+2. **Subject** — for face preservation: which figure has the face, how the person
+   should appear.
+3. **Typography** — for text transfer: "Copy the text from Image3 to the top",
+   with contrast and placement.
+4. **Style** — lighting, atmosphere, palette.
+5. **Constraints** — "do not change the background", "keep original lighting".
 
-## Before generating
+Tips:
+- Multi-image composition: reference elements from different images freely.
+- Prompt always required — even with `medias`, describe what to do.
+- Best for preserving a non-famous person's face from a reference photo.
 
-Call `higgsfield_generate_models_explore(action='get', model_id='seedream_v4_5')` to load
-live parameters (quality tiers, resolution options, sub_model, medias roles, etc.).
+## Generate
 
-## Tool call
+1. `higgsfield_generate_models_explore(action='get', model_id='seedream_v4_5')`  *(or `seedream_v5_lite`)*
+2. `higgsfield_generate_image`
 
-```
-higgsfield_generate_image(requests=[{
-  "model": "seedream_v4_5",
-  "prompt": "<prompt>",
-  "aspect_ratio": "<one of: 1:1, 4:3, 16:9, 3:2, 21:9, 3:4, 9:16, 2:3 (V4.5); 1:1, 16:9, 9:16, 4:3, 3:4 (V5 Lite)>",
-  // add other params from models_explore
-}])
-```
-
-For full prompt-craft guidance, call:
-```
-skill_view(name="image-generation", file_path="references/seedream-v4-5.md")
-```
+With a reference: add `medias: [{"value":"<id>","role":"image"}]`.

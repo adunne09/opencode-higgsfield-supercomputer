@@ -422,7 +422,7 @@ For every run, verify:
 
 ## TWO-CHANNEL INPUT TRACKING
 
-Every `higgsfield_generate` call produces two critical outputs:
+Every `higgsfield_generate_image` / `higgsfield_generate_video` call produces two critical outputs:
 
 1. **job_id** — used for polling status, error handling, retry logic
 2. **result.url** — the actual asset URL fed as `medias` to the next stage

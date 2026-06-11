@@ -1,28 +1,33 @@
-# Image Generation Reference - Soul 2.0
+# Soul 2.0 (text2image_soul_v2)
 
-Model ID: `text2image_soul_v2`
+Text-to-image for high-quality aesthetic images — portraits, landscapes, abstract
+art, product shots, editorial, fashion, stylized illustration. Image-to-image:
+pass a reference in `medias`; the prompt is **ignored** when `medias` is present
+(the model transforms the reference directly).
 
-Best for: New original character/person - UGC creator, influencer, editorial, fashion, vibe-driven portraits. NEVER for text/typography.
+## Prompting
 
-Supported aspect ratios: 1:1, 16:9, 9:16, 4:3, 3:4, 3:2, 2:3
+Write as a **single dense paragraph** in this order:
+1. **Opening** — subject + shot type ("A high-angle close-up of…").
+2. **Details/textures** — objects, clothing, materials ("glossy", "weathered",
+   "knitted"). Transcribe desired text verbatim.
+3. **Setting** — background, arrangement, negative space.
+4. **Lighting** — sources + quality ("specular highlights", "diffuse shadows",
+   "volumetric rays").
+5. **Color palette** — dominant + accent ("muted olive and slate gray").
+6. **Composition/camera** — angle, framing, depth of field, lens.
+7. **Medium** — "35mm film", "digital editorial"; grain/noise if relevant.
+8. **Mood** — "nostalgic and melancholic", "cozy and intimate".
 
-## Before generating
+Tips:
+- Objective, technical, photographic tone — material reality, not poetry.
+- Min age 20 for humans; age up minors to "young woman/man, 20 years old".
+- Model adds opaque clothing internally; "sheer" / "see-through" get replaced.
+- **No text/lettering** — does not render readable text. For cinematic framing use Soul Cinematic.
 
-Call `higgsfield_generate_models_explore(action='get', model_id='text2image_soul_v2')` to load
-live parameters (quality tiers, resolution options, sub_model, medias roles, etc.).
+## Generate
 
-## Tool call
+1. `higgsfield_generate_models_explore(action='get', model_id='text2image_soul_v2')`
+2. `higgsfield_generate_image`
 
-```
-higgsfield_generate_image(requests=[{
-  "model": "text2image_soul_v2",
-  "prompt": "<prompt>",
-  "aspect_ratio": "<one of: 1:1, 16:9, 9:16, 4:3, 3:4, 3:2, 2:3>",
-  // add other params from models_explore
-}])
-```
-
-For full prompt-craft guidance, call:
-```
-skill_view(name="image-generation", file_path="references/text2image-soul-v2.md")
-```
+Image-to-image: pass `medias: [{"value":"<id>","role":"image"}]` — the prompt is ignored.

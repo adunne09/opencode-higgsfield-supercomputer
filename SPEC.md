@@ -40,6 +40,9 @@
 - higgsfield_enhancer — backend prompt enhancer (40+ named flows)
 - higgsfield_job_status — poll the status of generation jobs
 
+**Higgsfield — Audio**
+- higgsfield_audio_generate — generate voiceover, voice swap, and translated/dubbed audio
+
 **Memory and State**
 - memory — persistent memory across sessions (user profile and project facts)
 - artifacts — store/retrieve per-chat artifacts (job IDs, URLs, etc.)

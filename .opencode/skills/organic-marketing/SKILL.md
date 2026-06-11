@@ -11,7 +11,7 @@ tags: [marketing, research, organic, social-media]
 
 Use organic_marketing to plan campaign research, format structured research
 reports, and prepare content generation plans. Use existing platform tools to
-fetch data and higgsfield_generate for media creation.
+fetch data and higgsfield_generate_image / higgsfield_generate_video for media creation.
 
 ## Setup
 
@@ -32,7 +32,7 @@ tool_search(action="load", toolsets=["organic_marketing"])
    call organic_marketing(action="generate") when content generation is requested.
 6. For generation, write content_ideas from the research report and campaign
    strategy, call organic_marketing(action="generate"), then run the returned
-   higgsfield_generate tool calls for video platforms. Capture returned job IDs.
+   higgsfield_generate_image / higgsfield_generate_video tool calls for video platforms. Capture returned job IDs.
    For X, use the returned text payload; no media request is emitted.
    Batch large campaigns by account or platform.
 
